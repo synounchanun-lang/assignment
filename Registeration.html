@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="LoginandRegister.css">
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h2>Create Account</h2>
+            <p>Fill in your details to register</p>
+        </div>
+
+        <form>
+            <!--FULLNAME-->
+            <div class="input-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="Sinuon Chanun">
+            </div>
+
+            <!--USERNAME-->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Chanun82">
+            </div>
+
+            <!--BIRTHDATE-->
+            <div class="input-group">
+                <label>Birthdate</label>
+                <div class="birthdate-group">
+                    <input type="number" placeholder="DD" min="1" max="31">
+                    <select>
+                        <option value="">Month</option>
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov">November</option>
+                        <option value="dec">December</option>
+                    </select>
+                    <input type="number" placeholder="YYYY" min="1900" max="2026">
+                </div>
+            </div>
+
+            <!--GENDER-->
+            <div class="input-group">
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option value="">-- Choose an option --</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="private">Private</option>
+                </select>
+            </div>
+
+            <!--Password-->
+            <div class="input-group">
+                <label for="pwd">Password</label>
+                <input type="password" id="pwd" placeholder="••••••••">
+            </div>
+
+            <div class="input-group">
+                <label for="cpwd">Confirm Password</label>
+                <input type="password" id="cpwd" placeholder="••••••••">
+            </div>
+
+            <!--Submit Button-->
+            <button type="submit" class="btn">Register</button>
+
+            <!-- Login Prompt -->
+            <div class="footer-text">
+                Already have an account? <a href="login.html">Log in</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

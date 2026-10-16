@@ -1,0 +1,145 @@
+
+:root {
+  --bg-dark: #231d44;        
+  --bg-header-top: #150f2e;  
+  --bg-header-end: #3a1559;  
+  --pink: #ff7fe6;           
+  --white: #ffffff;
+
+  --font-main: "Segoe UI", Tahoma, Arial, sans-serif;
+  --max-width: 1100px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-dark);
+  color: var(--white);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Centers content and limits its width.
+   Reuse this class on every section later. */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: linear-gradient(to right, var(--bg-header-top), var(--bg-header-end));
+  padding: 18px 0;
+}
+/* The flex row: logo left, nav + icons pushed to the right */
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ---------- Logo ---------- */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo img {
+  height: 36px;
+  display: block;
+}
+
+/* ---------- Navigation ---------- */
+.main-nav {
+  margin-left: auto; /* pushes nav and icons to the right side */
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--pink);
+  border-bottom-color: var(--pink);
+}
+
+/* ---------- Icons (cart, gamepad, user) ---------- */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icons a {
+  position: relative; /* lets the cart count sit on top of the icon */
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.icons a:hover,
+.icons a:focus-visible {
+  color: var(--pink);
+}
+
+/* Small round badge with the number of items */
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background-color: var(--pink);
+  color: var(--bg-header-top);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+/* ==========================================================
+   4. RESPONSIVE - tablets and phones
+   ========================================================== */
+@media (max-width: 700px) {
+  .header-inner {
+    flex-wrap: wrap;      /* lets the nav drop to its own row */
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .main-nav {
+    order: 3;             /* moves nav below the logo and icons */
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .main-nav ul {
+    justify-content: space-between;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,138 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0b020c;
+    color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 98vh;
+}
+.card {
+    background: #740370;
+    border: 1px solid #e2e8f0;
+    padding: 35px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin-bottom: 6px;
+}
+
+.header p {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #334155;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #0f172a;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus, select:focus {
+    border-color: #0f172a;
+    box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.1);
+}
+
+
+.birthdate-group {
+    display: flex;
+    gap: 8px;
+}
+
+.birthdate-group input,
+.birthdate-group select {
+    flex: 1;
+}
+
+
+.forgot-link {
+    font-size: 0.8rem;
+    color: #64748b;
+    text-decoration: none;
+    text-align: right;
+    margin-top: 2px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+    color: #0f172a;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 10px 16px;
+    background-color: #1043ba;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    margin-top: 4px;
+}
+
+.btn:hover {
+    background-color: #1e293b;
+}
+
+
+.footer-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.footer-text a {
+    color: #1744af;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
